@@ -56,7 +56,7 @@ const StaticWorksContent = () => (
             <CaptionedImage
 
               caption={createPrismicParagraph('Sir Henry Solomon Wellcome (1853—1936). Pharmacist, entrepreneur, philanthropist and collector.')}
-              sizesQueries='600px'
+              sizesQueries='(min-width: 1580px) 490px, calc(31.03vw + 6px)'
               image={{
                 contentUrl: 'https://iiif.wellcomecollection.org/image/V0027772.jpg/full/full/0/default.jpg',
                 width: 1600,
