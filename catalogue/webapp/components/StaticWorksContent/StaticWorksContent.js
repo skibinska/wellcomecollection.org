@@ -1,6 +1,6 @@
 // @flow
 import { Fragment } from 'react';
-import { spacing, font, grid } from '@weco/common/utils/classnames';
+import { spacing, font, grid, classNames } from '@weco/common/utils/classnames';
 import { createPrismicParagraph } from '@weco/common/utils/prismic';
 import Tags from '@weco/common/views/components/Tags/Tags';
 import { CaptionedImage } from '@weco/common/views/components/Images/Images';
@@ -8,7 +8,12 @@ import { worksUrl } from '../../services/catalogue/urls';
 
 const StaticWorksContent = () => (
   <Fragment>
-    <div className={`row ${spacing({ s: 3, m: 5 }, { padding: ['top'] })}`}>
+    <div
+      className={classNames({
+        row: true,
+        [spacing({ s: 3, m: 5 }, { padding: ['top'] })]: true,
+      })}
+    >
       <div className="container">
         <div className="grid">
           <div className="grid__cell">

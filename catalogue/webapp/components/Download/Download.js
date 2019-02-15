@@ -25,7 +25,11 @@ const Download = ({
 }: Props) => {
   return (
     <Fragment>
-      <div className={spacing({ s: 2 }, { margin: ['bottom'] })}>
+      <div
+        className={classNames({
+          [spacing({ s: 2 }, { margin: ['bottom'] })]: true,
+        })}
+      >
         <Button
           type="tertiary"
           url={convertImageUri(iiifImageLocationUrl, 'full')}
@@ -43,10 +47,10 @@ const Download = ({
       </div>
 
       <div
-        className={`${spacing({ s: 3 }, { margin: ['bottom'] })} ${spacing(
-          { s: 0 },
-          { margin: ['top'] }
-        )}`}
+        className={classNames({
+          [spacing({ s: 3 }, { margin: ['bottom'] })]: true,
+          [spacing({ s: 0 }, { margin: ['top'] })]: true,
+        })}
       >
         <Button
           type="tertiary"
@@ -65,7 +69,11 @@ const Download = ({
       </div>
 
       {(iiifImageLocationCredit || iiifImageLocationLicenseId) && (
-        <div className={spacing({ s: 0 }, { margin: ['top'] })}>
+        <div
+          className={classNames({
+            [spacing({ s: 0 }, { margin: ['top'] })]: true,
+          })}
+        >
           {iiifImageLocationCredit && (
             <p
               className={classNames([

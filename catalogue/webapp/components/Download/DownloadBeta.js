@@ -229,7 +229,9 @@ const DownloadBeta = ({
           )}
           <a
             href="#licenseInformation"
-            className={font({ s: 'HNM5', m: 'HNM4' })}
+            className={classNames({
+              [font({ s: 'HNM5', m: 'HNM4' })]: true,
+            })}
           >
             <span className="flex-inline flex--v-center nowrap">
               <Icon name="arrowSmall" extraClasses="icon--90" />
