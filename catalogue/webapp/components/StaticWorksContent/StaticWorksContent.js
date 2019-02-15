@@ -1,6 +1,6 @@
 // @flow
 import { Fragment } from 'react';
-import { spacing, font, grid } from '@weco/common/utils/classnames';
+import { spacing, font, grid, classNames } from '@weco/common/utils/classnames';
 import { createPrismicParagraph } from '@weco/common/utils/prismic';
 import Tags from '@weco/common/views/components/Tags/Tags';
 import { CaptionedImage } from '@weco/common/views/components/Images/Images';
@@ -8,20 +8,38 @@ import { worksUrl } from '../../services/catalogue/urls';
 
 const StaticWorksContent = () => (
   <Fragment>
-    <div className={`row ${spacing({ s: 3, m: 5 }, { padding: ['top'] })}`}>
+    <div
+      className={classNames({
+        row: true,
+        [spacing({ s: 3, m: 5 }, { padding: ['top'] })]: true,
+      })}
+    >
       <div className="container">
         <div className="grid">
           <div className="grid__cell">
-            <h3 className={font({ s: 'WB6', m: 'WB4' })}>Feeling curious?</h3>
+            <h3
+              className={classNames({
+                [font({ s: 'WB6', m: 'WB4' })]: true,
+              })}
+            >
+              Feeling curious?
+            </h3>
             <p
-              className={`${spacing({ s: 2 }, { margin: ['bottom'] })} ${font({
-                s: 'HNL4',
-                m: 'HNL3',
-              })}`}
+              className={classNames({
+                [font({
+                  s: 'HNL4',
+                  m: 'HNL3',
+                })]: true,
+                [spacing({ s: 2 }, { margin: ['bottom'] })]: true,
+              })}
             >
               Discover our collections through these topics.
             </p>
-            <div className={spacing({ s: 4 }, { margin: ['bottom'] })}>
+            <div
+              className={classNames({
+                [spacing({ s: 4 }, { margin: ['bottom'] })]: true,
+              })}
+            >
               <Tags
                 tags={[
                   {
@@ -57,10 +75,11 @@ const StaticWorksContent = () => (
               />
             </div>
             <hr
-              className={`divider divider--dashed ${spacing(
-                { s: 6 },
-                { margin: ['bottom'] }
-              )}`}
+              className={classNames({
+                divider: true,
+                'divider--dashed': true,
+                [spacing({ s: 6 }, { margin: ['bottom'] })]: true,
+              })}
             />
           </div>
         </div>

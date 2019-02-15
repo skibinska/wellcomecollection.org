@@ -132,9 +132,11 @@ const SearchForm = ({
             autoFocus={query === ''}
             onChange={event => setQuery(event.currentTarget.value)}
             ref={searchInput}
-            className={font({
-              s: compact ? 'HNL4' : 'HNL3',
-              m: compact ? 'HNL3' : 'HNL2',
+            className={classNames({
+              [font({
+                s: compact ? 'HNL4' : 'HNL3',
+                m: compact ? 'HNL3' : 'HNL2',
+              })]: true,
             })}
           />
 
